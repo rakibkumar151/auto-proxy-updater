@@ -1,26 +1,28 @@
-name: Auto Proxy Update
+name: Proxy Auto Update
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # প্রতি ৫ মিনিট পর পর চলবে
-  workflow_dispatch: # ইচ্ছা করলে ম্যানুয়ালি রান করার জন্য
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
 
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
+    permissions: # এটি নিশ্চিত করে যে কোড লেখার অনুমতি আছে
+      contents: write
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - name: Setup Python
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: '3.9'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: pip install requests
 
-      - name: Run Proxy Updater
+      - name: Run Script
         run: python proxy_bot.py
 
       - name: Commit and Push
@@ -28,5 +30,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add live_proxies.txt
-          git commit -m "Auto-update proxy list" || exit 0
+          git commit -m "Updated Live Proxies" || exit 0
           git push
