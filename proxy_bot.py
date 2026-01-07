@@ -9,23 +9,6 @@ SOURCES = [
     "https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/socks5.txt",
     # Monosans (Very Clean)
     "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks4.txt",
-    "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks5.txt",
-    # Vakhov (Freshly Scraped)
-    "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/master/socks4.txt",
-    "https://raw.githubusercontent.com/vakhov/fresh-proxy-list/master/socks5.txt",
-    # Jetkai (Validated Daily)
-    "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks4.txt",
-    "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks5.txt",
-    # MuRongPIG
-    "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/socks4.txt",
-    "https://raw.githubusercontent.com/MuRongPIG/Proxy-Master/main/socks5.txt",
-    # ShiftyTR
-    "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks4.txt",
-    "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks5.txt"
-    # Others (Uptimer, Fate0, etc)
-    "https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.txt",
-    "https://raw.githubusercontent.com/roosterkid/openproxylist/main/HTTPS_RAW.txt",
-    "https://raw.githubusercontent.com/sunny9577/proxy-scraper/master/proxies.txt",
     "https://raw.githubusercontent.com/rdavydov/proxy-list/main/proxies/socks5.txt",
     "https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt",
     "https://raw.githubusercontent.com/ErcinDedeoglu/proxies/main/proxies/socks5.txt"
@@ -74,4 +57,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
